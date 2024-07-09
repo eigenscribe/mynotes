@@ -69,4 +69,29 @@ train = scaler.transform(train)
 print("\n The minimum value is {} {} {} and the maximum value is {} {} {}"
      .format(bc.OKCYAN, train.min(), bc.ENDC, bc.OKCYAN, train.max(), bc.ENDC))
 
+print()
 print(train)
+
+# 5 - Training and Testing
+from sklearn.model_selection import train_test_split
+input_data = train[:, 1:8]
+labels = train[:, 0]
+
+train_input, test_input, train_labels, test_labels = train_test_split(input_data, labels, test_size = 0.2) 
+print('\n We have {} {} training {} and {} {} testing rows {}'
+     .format(bc.BLUE, train_input.shape[0], bc.ENDC, bc.BLUE, test_input.shape[0], bc.ENDC))
+print('\n There are {} {} input columns {}'
+     .format(bc.PURPLE, train_input.shape[1], bc.ENDC))
+
+
+#Save the data to the filesystem
+import numpy as np
+
+with open('train.npy', 'wb') as f:
+  np.save(f, train_input)
+  np.save(f, train_labels)
+
+with open('test.npy', 'wb') as f:
+  np.save(f, test_input)
+  np.save(f, train_labels)
+  
