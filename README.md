@@ -1,2 +1,2 @@
-# muynotes
+# mynotes
 Notes from online courses
