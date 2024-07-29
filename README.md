@@ -1,4 +1,11 @@
 # mynotes
-Notes from online courses
-- [ ] Finish module 1 of quantum machine learning algorithms
-- [ ] Enki folder
+educative
+- [x] QMLA - Module 1
+- [ ] QMLA - Module 2
+- [ ] OOP app - Module
+- [ ]
+enk1
+- [ ] Create 🏠🗄️
+  - [ ] python
+  - [ ] html & css
+  - [ ] other stuff
